@@ -1,0 +1,26 @@
+.hero {
+	display: flex;
+	height: 90vh;
+	position: relative;
+
+	&__image {
+		display: block;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0.7;
+		position: absolute;
+		width: 100%;
+		z-index: 0;
+	}
+
+	&__text {
+		margin: auto;
+		position: relative;
+		z-index: 1;
+
+		p {
+			font-size: 3rem;
+			margin: 0;
+		}
+	}
+}

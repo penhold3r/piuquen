@@ -1,42 +1,70 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import PropTypes from 'prop-types'
+import React from 'react'
+
+import { Link } from 'react-scroll'
+
+import logo from '../images/piuquen-logo.svg'
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+	<header className="main-header ">
+		<div className="inner-header p-1">
+			<h1 className="logo m-none">
+				<img src={logo} alt={siteTitle} />
+			</h1>
+			<nav className="main-nav">
+				<ul className="nav-list">
+					<li className="nav-item m-h-1">
+						<Link
+							to=""
+							duration={500}
+							smooth={true}
+							className="nav-item__link px-h-1 text-color-white"
+						>
+							Inicio
+						</Link>
+					</li>
+					<li className="nav-item m-h-1">
+						<Link
+							to=""
+							duration={500}
+							smooth={true}
+							className="nav-item__link px-h-1 text-color-white"
+						>
+							Historia
+						</Link>
+					</li>
+					<li className="nav-item m-h-1">
+						<Link
+							to=""
+							duration={500}
+							smooth={true}
+							className="nav-item__link px-h-1 text-color-white"
+						>
+							Productos
+						</Link>
+					</li>
+					<li className="nav-item m-h-1">
+						<Link
+							to="inicio"
+							duration={500}
+							smooth={true}
+							className="nav-item__link px-h-1 text-color-white"
+						>
+							Contacto
+						</Link>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+	siteTitle: PropTypes.string
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+	siteTitle: ``
 }
 
 export default Header

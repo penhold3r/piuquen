@@ -1,0 +1,30 @@
+@import './includes/*.scss';
+
+body {
+	color: $dark-grey;
+	font-family: $main-font;
+	font-weight: $regular;
+	line-height: 1.5;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+
+	main {
+		position: relative;
+
+		.display {
+			font-family: $display-font;
+			font-style: normal;
+		}
+	}
+
+	.human {
+		background: transparent;
+		border: none;
+		height: 0;
+		pointer-events: none;
+		visibility: hidden;
+		width: 0;
+	}
+}
+
+@import './components/*.scss';

@@ -1,0 +1,31 @@
+.products {
+	padding: 3rem 1rem;
+	position: relative;
+
+	&__title {
+		text-align: center;
+		font-weight: $regular;
+		line-height: 0.9;
+		text-transform: uppercase;
+		margin: 0 0 1rem;
+
+		.display {
+			text-transform: lowercase;
+			font-size: 2em;
+		}
+	}
+
+	&__intro {
+		margin: 0 auto;
+		text-align: center;
+		width: 800px;
+	}
+
+	&__gallery {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: 1fr 1fr;
+		margin: 3rem auto;
+		width: 800px;
+	}
+}

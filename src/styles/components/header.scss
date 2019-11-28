@@ -1,0 +1,40 @@
+.main-header {
+	background: linear-gradient($dark, rgba($dark, 0));
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	z-index: 99;
+
+	.inner-header {
+		display: flex;
+		justify-content: space-between;
+		max-width: $max-width;
+
+		.logo {
+			width: 200px;
+
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+
+	.main-nav {
+		display: flex;
+
+		.nav-list {
+			margin: 1rem auto;
+			list-style: none;
+			display: flex;
+
+			.nav-item {
+				&__link {
+					text-transform: uppercase;
+					letter-spacing: 0.05rem;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,74 @@
+.chocolate {
+	display: flex;
+	height: 400px;
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -6rem;
+		left: 2rem;
+		background: url('../images/sprinkles.png') no-repeat center center / contain;
+		height: 200px;
+		width: 200px;
+		z-index: 1;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -6rem;
+		right: 2rem;
+		background: url('../images/ice-cream.png') no-repeat center center / contain;
+		height: 200px;
+		width: 200px;
+		z-index: 1;
+	}
+
+	&__bg-image {
+		height: 100%;
+		left: 0;
+		position: absolute !important;
+		top: 0;
+		width: 100%;
+		z-index: 0;
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		position: relative;
+		z-index: 1;
+
+		p {
+			color: $white;
+			font-size: 2rem;
+			letter-spacing: 0.1rem;
+			text-shadow: 0 0 6px rgba(#000, 0.9), 0 0 9px rgba(#000, 0.9), 0 0 12px rgba(#000, 0.9);
+			text-transform: uppercase;
+			margin: auto;
+		}
+
+		.icon {
+			display: flex;
+			margin: 2rem auto;
+
+			&:before,
+			&:after {
+				align-self: center;
+				background: $accent-color;
+				display: block;
+				content: '';
+				height: 1px;
+				width: 200px;
+			}
+
+			img {
+				display: block;
+				margin: 0 1rem;
+				width: 50px;
+			}
+		}
+	}
+}

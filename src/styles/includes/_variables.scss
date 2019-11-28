@@ -1,0 +1,49 @@
+/* -------------------------
+*
+* Color Scheme
+*
+*/
+
+$primary-color: #573014;
+$secondary-color: #967544;
+$accent-color: #f08989;
+
+$light-grey: #ccc2ba;
+$grey: #776d69;
+$dark-grey: #383331;
+$dark: #231f1e;
+
+$black: $dark;
+$white: #fefefe;
+
+$box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+
+/* -------------------------
+*
+* Fonts
+*
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arizonia&display=swap');
+
+$main-font: 'Playfair Display', serif;
+$title-font: 'Playfair Display', serif;
+$display-font: 'Arizonia', 'Georgia', serif;
+
+$light: 400;
+$regular: 400;
+$bold: 900;
+
+/* -------------------------
+*
+* Breakpoints
+*
+*/
+
+$max-width: 1300px;
+
+$full: $max-width;
+$narrow: 1100px;
+$tablet: 780px;
+$phone: 560px;
