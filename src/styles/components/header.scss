@@ -9,10 +9,15 @@
 	.inner-header {
 		display: flex;
 		justify-content: space-between;
+		margin: 0 auto;
 		max-width: $max-width;
 
 		.logo {
 			width: 200px;
+
+			@include tablet {
+				margin: 3rem auto 0;
+			}
 
 			img {
 				display: block;
@@ -24,10 +29,22 @@
 	.main-nav {
 		display: flex;
 
+		@include tablet {
+			background: $dark;
+			position: fixed;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+
 		.nav-list {
 			margin: 1rem auto;
 			list-style: none;
 			display: flex;
+
+			@include tablet {
+				margin: 0.5rem auto;
+			}
 
 			.nav-item {
 				&__link {

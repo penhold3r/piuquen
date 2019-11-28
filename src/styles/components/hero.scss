@@ -15,12 +15,18 @@
 
 	&__text {
 		margin: auto;
+		padding: 1rem;
 		position: relative;
 		z-index: 1;
 
 		p {
 			font-size: 3rem;
 			margin: 0;
+
+			@include tablet {
+				font-size: 2rem;
+				text-align: center;
+			}
 		}
 	}
 }

@@ -26,6 +26,18 @@
 		gap: 1rem;
 		grid-template-columns: 1fr 1fr;
 		margin: 3rem auto;
+		position: relative;
 		width: 800px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: -5rem;
+			left: -9rem;
+			background: url('../images/strawberries.png') no-repeat center center / contain;
+			height: 200px;
+			width: 200px;
+			z-index: 9;
+		}
 	}
 }
