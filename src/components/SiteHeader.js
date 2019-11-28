@@ -4,7 +4,7 @@ import { Link } from 'react-scroll'
 
 import logo from '../images/piuquen-logo.svg'
 
-const Header = ({ siteTitle }) => (
+const SiteHeader = ({ siteTitle }) => (
 	<header className="main-header ">
 		<div className="inner-header p-1">
 			<h1 className="logo m-none" data-aos="fade-in">
@@ -58,4 +58,4 @@ const Header = ({ siteTitle }) => (
 	</header>
 )
 
-export default Header
+export default SiteHeader

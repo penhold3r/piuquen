@@ -8,7 +8,7 @@ import AOS from 'aos'
 // import { faHome, faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 
 import HTMLHead from '../components/HTMLHead'
-import Header from '../components/Header'
+import SiteHeader from '../components/SiteHeader'
 import Footer from '../components/Footer'
 
 import Hero from '../components/Hero'
@@ -47,7 +47,7 @@ const IndexPage = () => {
 	return (
 		<>
 			<HTMLHead title={title} description={description} author={author} />
-			<Header siteTitle={title} />
+			<SiteHeader siteTitle={title} />
 			<main className="main">
 				<Hero />
 				<History />
