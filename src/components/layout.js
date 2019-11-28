@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
@@ -7,13 +7,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faHome, faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 
-import AOS from 'aos'
-
 import Header from './Header'
 import Footer from './Footer'
 
 import 'sanitize.css'
-import 'aos/dist/aos.css'
 import '../styles/index.scss'
 
 import opengraph from '../images/piuquen-og.png'
@@ -23,10 +20,6 @@ import faviconPNG from '../images/favicon.png'
 library.add(fab, faHome, faEnvelope, faPhoneAlt)
 
 const Layout = ({ title, children }) => {
-	useEffect(() => {
-		AOS.init()
-	}, [])
-
 	return (
 		<StaticQuery
 			query={graphql`
