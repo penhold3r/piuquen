@@ -47,9 +47,17 @@
 			}
 
 			.nav-item {
+				@include phone {
+					margin: 0.25rem !important;
+				}
+
 				&__link {
 					text-transform: uppercase;
 					letter-spacing: 0.05rem;
+
+					@include phone {
+						font-size: 0.8rem;
+					}
 				}
 			}
 		}
