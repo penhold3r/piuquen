@@ -1,0 +1,51 @@
+.specials {
+	margin: 0 auto;
+	max-width: 1000px;
+	position: relative;
+
+	&__title {
+		font-weight: $regular;
+		line-height: 0.8;
+		text-transform: uppercase;
+		margin: 0 0 1rem;
+
+		@include tablet {
+			text-align: center;
+		}
+
+		.display {
+			text-transform: lowercase;
+			font-size: 2em;
+		}
+	}
+
+	&__content {
+		display: flex;
+
+		@include tablet {
+			flex-wrap: wrap;
+		}
+
+		.content-text {
+			margin: 0 2rem 0 0;
+			width: $w1-3;
+
+			@include tablet {
+				text-align: center;
+				width: 100%;
+			}
+		}
+
+		.content-image {
+			width: $w2-3;
+
+			@include tablet {
+				width: 100%;
+			}
+
+			img {
+				object-fit: contain !important;
+			}
+		}
+	}
+}

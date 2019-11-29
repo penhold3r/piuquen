@@ -3,9 +3,9 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import AOS from 'aos'
 
-// import { library } from '@fortawesome/fontawesome-svg-core'
-// import { fab } from '@fortawesome/free-brands-svg-icons'
-// import { faHome, faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faHome, faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
 
 import HTMLHead from '../components/HTMLHead'
 import SiteHeader from '../components/SiteHeader'
@@ -15,12 +15,14 @@ import Hero from '../components/Hero'
 import History from '../components/History'
 import Chocolate from '../components/Chocolate'
 import Productos from '../components/Productos'
+import Specials from '../components/Specials'
+import Contact from '../components/Contact'
 
 import 'sanitize.css'
 import '../styles/index.scss'
 import 'aos/dist/aos.css'
 
-//library.add(fab, faHome, faEnvelope, faPhoneAlt)
+library.add(fab, faHome, faEnvelope, faPhoneAlt)
 
 const IndexPage = () => {
 	const {
@@ -53,6 +55,8 @@ const IndexPage = () => {
 				<History />
 				<Chocolate />
 				<Productos />
+				<Specials />
+				<Contact />
 			</main>
 			<Footer />
 		</>

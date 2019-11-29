@@ -12,6 +12,12 @@
 		height: 200px;
 		width: 200px;
 		z-index: 1;
+
+		@include phone {
+			height: 120px;
+			top: -4rem;
+			width: 120px;
+		}
 	}
 
 	&:after {
@@ -23,6 +29,12 @@
 		height: 200px;
 		width: 200px;
 		z-index: 1;
+
+		@include phone {
+			bottom: -4rem;
+			height: 120px;
+			width: 120px;
+		}
 	}
 
 	&__bg-image {
@@ -44,6 +56,7 @@
 		p {
 			color: $white;
 			font-size: 2rem;
+			text-align: center;
 			letter-spacing: 0.1rem;
 			text-shadow: 0 0 6px rgba(#000, 0.9), 0 0 9px rgba(#000, 0.9), 0 0 12px rgba(#000, 0.9);
 			text-transform: uppercase;

@@ -1,0 +1,79 @@
+.contact {
+	margin: 0 auto;
+	max-width: 800px;
+
+	@include phone {
+		width: 100%;
+	}
+
+	&__title {
+		font-weight: $regular;
+		line-height: 0.7;
+		margin: 0 0 1rem;
+		text-align: center;
+		text-transform: uppercase;
+
+		.display {
+			font-size: 2em;
+			text-transform: lowercase;
+		}
+	}
+
+	&__form {
+		margin: 4rem auto 0;
+		max-width: 500px;
+
+		@include phone {
+			width: 100%;
+		}
+
+		.form-block {
+			margin: 0 0 1rem;
+
+			.input {
+				border-radius: 6px;
+				border: 1px solid $light-grey;
+				display: block;
+				font-family: $main-font;
+				font-size: 1rem;
+				padding: 0.25rem 1rem;
+				transition: all 0.3s;
+				width: 100%;
+
+				@include placeholder {
+					color: $secondary-color;
+					font-size: 1rem;
+					font-style: italic;
+					opacity: 1;
+					transition: all 0.3s;
+				}
+
+				&.msg {
+					height: 5rem;
+					resize: none;
+				}
+
+				&:focus {
+					border: 1px solid $secondary-color;
+
+					@include placeholder {
+						opacity: 0;
+					}
+				}
+			}
+		}
+
+		.submit {
+			background: $accent-color;
+			border-radius: 6px;
+			border: none;
+			color: $white;
+			font-family: $main-font;
+			font-size: 1rem;
+			font-style: italic;
+			padding: 0.5rem 1rem;
+			text-align: center;
+			width: 100%;
+		}
+	}
+}

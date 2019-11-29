@@ -62,16 +62,20 @@ const Productos = () => {
 
 			<div className="products__gallery">
 				<div className="product-img">
-					<Img fluid={bombones.childImageSharp.fluid} alt={bombones.name} />
+					<Img className="gimage" fluid={bombones.childImageSharp.fluid} alt={bombones.name} />
 				</div>
 				<div className="product-img">
-					<Img fluid={galletitas.childImageSharp.fluid} alt={galletitas.name} />
+					<Img
+						className="gimage"
+						fluid={galletitas.childImageSharp.fluid}
+						alt={galletitas.name}
+					/>
 				</div>
 				<div className="product-img">
-					<Img fluid={rellenos.childImageSharp.fluid} alt={rellenos.name} />
+					<Img className="gimage" fluid={rellenos.childImageSharp.fluid} alt={rellenos.name} />
 				</div>
 				<div className="product-img">
-					<Img fluid={helados.childImageSharp.fluid} alt={helados.name} />
+					<Img className="gimage" fluid={helados.childImageSharp.fluid} alt={helados.name} />
 				</div>
 			</div>
 		</section>

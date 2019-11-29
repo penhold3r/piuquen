@@ -28,11 +28,11 @@ module.exports = {
 			resolve: `gatsby-plugin-manifest`,
 			options: {
 				name: `piuquen-schoclotaes`,
-				short_name: `starter`,
+				short_name: `piuquen`,
 				start_url: `/`,
-				background_color: `#663399`,
-				theme_color: `#663399`,
-				display: `minimal-ui`,
+				background_color: `#573014`,
+				theme_color: `#231f1e`,
+				display: `standalone`,
 				icon: `src/images/favicon.png` // This path is relative to the root of the site.
 			}
 		},
