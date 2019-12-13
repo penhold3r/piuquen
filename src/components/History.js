@@ -2,7 +2,7 @@ import React from 'react'
 
 const History = () => {
 	return (
-		<section className="history px-1 py-5">
+		<section className="history px-1 py-5" data-aos="fade-up" id="historia">
 			<h2 className="history__title text-color-primary">
 				Nuestra
 				<br />
@@ -17,13 +17,16 @@ const History = () => {
 				</p>
 			</div>
 
-			<div className="history__about p-1">
-				<h3 className="about-title display text-color-accent">Conocenos</h3>
-				<div className="about-text p-1">
+			<div className="history__about p-1" data-aos="fade-up">
+				<h3 className="about-title m-none text-color-accent">Conocenos</h3>
+				<div className="about-text p-h-1">
 					<p className="text-color-primary">
-						Gustavo, Marisa y Carina los une la familia y un proyecto soñado por los tres, el
-						de fabricar chocolate. Cada uno con su impronta hacen que sus artículos se
-						distingan y ocupen un lugar muy valorado por quienes lo sumaron a sus productos.
+						<em>
+							Gustavo, Marisa y Carina los une la familia y un proyecto soñado por los tres,
+							el de fabricar chocolate. Cada uno con su impronta hacen que sus artículos se
+							distingan y ocupen un lugar muy valorado por quienes lo sumaron a sus
+							productos.
+						</em>
 					</p>
 				</div>
 			</div>

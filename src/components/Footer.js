@@ -45,9 +45,7 @@ const Footer = () => {
 				<div className="contact-block">
 					<FontAwesomeIcon className="fa" icon={['fas', 'envelope']} />
 					<p>
-						<Link to="mailto:melldistribuidoraventas@gmail.com">
-							melldistribuidoraventas@gmail.com
-						</Link>
+						<Link to="mailto:info@piuquenchocolates.com">info@piuquenchocolates.com</Link>
 					</p>
 				</div>
 			</div>

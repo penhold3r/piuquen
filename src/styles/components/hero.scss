@@ -3,14 +3,34 @@
 	height: 90vh;
 	position: relative;
 
-	&__image {
+	&__slider {
 		display: block;
 		height: 100%;
 		object-fit: cover;
 		opacity: 0.7;
+		overflow: hidden;
 		position: absolute;
 		width: 100%;
 		z-index: 0;
+
+		.slide {
+			background: $primary-color;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+
+			&.fade-left {
+				animation: slide 2s ease-in-out 0s forwards;
+			}
+
+			.gatsby-image-wrapper {
+				height: 100%;
+				opacity: 0.8;
+				width: 100%;
+			}
+		}
 	}
 
 	&__text {
@@ -28,5 +48,18 @@
 				text-align: center;
 			}
 		}
+	}
+}
+
+@keyframes slide {
+	from {
+		transform: scale(1.2);
+		filter: brightness(350%);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		filter: brightness(100%);
+		opacity: 1;
 	}
 }

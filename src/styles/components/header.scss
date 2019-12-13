@@ -47,6 +47,8 @@
 			}
 
 			.nav-item {
+				height: fit-content;
+
 				@include phone {
 					margin: 0.25rem !important;
 				}
@@ -54,6 +56,31 @@
 				&__link {
 					text-transform: uppercase;
 					letter-spacing: 0.05rem;
+					transition: all 0.3s;
+					opacity: 0.9;
+					cursor: pointer;
+					position: relative;
+
+					&:after {
+						content: '';
+						height: 1px;
+						background: $accent-color;
+						width: 100%;
+						transition: all 0.3s;
+						position: absolute;
+						bottom: 0;
+						opacity: 0;
+						left: 0;
+					}
+
+					&:hover {
+						opacity: 1;
+
+						&:after {
+							opacity: 1;
+							bottom: -0.5rem;
+						}
+					}
 
 					@include phone {
 						font-size: 0.8rem;

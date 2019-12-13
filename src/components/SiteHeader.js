@@ -1,6 +1,5 @@
 import React from 'react'
-
-import { Link } from 'react-scroll'
+import { Link as ScrollLink } from 'react-scroll'
 
 import logo from '../images/piuquen-logo.svg'
 
@@ -13,44 +12,45 @@ const SiteHeader = ({ siteTitle }) => (
 			<nav className="main-nav">
 				<ul className="nav-list">
 					<li className="nav-item m-h-1">
-						<Link
-							to=""
-							duration={500}
-							smooth={true}
-							className="nav-item__link px-h-1 text-color-white"
-						>
-							Inicio
-						</Link>
-					</li>
-					<li className="nav-item m-h-1">
-						<Link
-							to=""
-							duration={500}
-							smooth={true}
-							className="nav-item__link px-h-1 text-color-white"
-						>
-							Historia
-						</Link>
-					</li>
-					<li className="nav-item m-h-1">
-						<Link
-							to=""
-							duration={500}
-							smooth={true}
-							className="nav-item__link px-h-1 text-color-white"
-						>
-							Productos
-						</Link>
-					</li>
-					<li className="nav-item m-h-1">
-						<Link
+						<ScrollLink
 							to="inicio"
 							duration={500}
 							smooth={true}
-							className="nav-item__link px-h-1 text-color-white"
+							className="nav-item__link p-h-1 text-color-white"
+						>
+							Inicio
+						</ScrollLink>
+					</li>
+					<li className="nav-item m-h-1">
+						<ScrollLink
+							to="historia"
+							duration={500}
+							smooth={true}
+							offset={-100}
+							className="nav-item__link p-h-1 text-color-white"
+						>
+							Historia
+						</ScrollLink>
+					</li>
+					<li className="nav-item m-h-1">
+						<ScrollLink
+							to="productos"
+							duration={500}
+							smooth={true}
+							className="nav-item__link p-h-1 text-color-white"
+						>
+							Productos
+						</ScrollLink>
+					</li>
+					<li className="nav-item m-h-1">
+						<ScrollLink
+							to="contacto"
+							duration={500}
+							smooth={true}
+							className="nav-item__link p-h-1 text-color-white"
 						>
 							Contacto
-						</Link>
+						</ScrollLink>
 					</li>
 				</ul>
 			</nav>

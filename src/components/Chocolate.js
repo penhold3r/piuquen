@@ -27,7 +27,7 @@ const Chocolate = () => {
 	return (
 		<section className="chocolate">
 			<Img className="chocolate__bg-image" fluid={fluid} alt={name} />
-			<div className="chocolate__text">
+			<div className="chocolate__text" data-aos="zoom-out">
 				<p>Una fiesta para tus sentidos</p>
 				<div className="icon">
 					<img src={icon} alt="" />

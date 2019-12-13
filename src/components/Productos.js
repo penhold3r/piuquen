@@ -48,7 +48,7 @@ const Productos = () => {
 	`)
 
 	return (
-		<section className="products">
+		<section className="products" id="productos">
 			<h2 className="products__title text-color-primary">
 				Productos
 				<br />
@@ -61,20 +61,20 @@ const Productos = () => {
 			</div>
 
 			<div className="products__gallery">
-				<div className="product-img">
+				<div className="product-img" data-aos="flip-up">
 					<Img className="gimage" fluid={bombones.childImageSharp.fluid} alt={bombones.name} />
 				</div>
-				<div className="product-img">
+				<div className="product-img" data-aos="flip-up">
 					<Img
 						className="gimage"
 						fluid={galletitas.childImageSharp.fluid}
 						alt={galletitas.name}
 					/>
 				</div>
-				<div className="product-img">
+				<div className="product-img" data-aos="flip-up">
 					<Img className="gimage" fluid={rellenos.childImageSharp.fluid} alt={rellenos.name} />
 				</div>
-				<div className="product-img">
+				<div className="product-img" data-aos="flip-up">
 					<Img className="gimage" fluid={helados.childImageSharp.fluid} alt={helados.name} />
 				</div>
 			</div>
