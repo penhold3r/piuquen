@@ -22,6 +22,7 @@
 	&__form {
 		margin: 4rem auto 0;
 		max-width: 500px;
+		position: relative;
 
 		@include phone {
 			width: 100%;
@@ -64,16 +65,46 @@
 		}
 
 		.submit {
-			background: $accent-color;
 			border-radius: 6px;
 			border: none;
 			color: $white;
+			cursor: pointer;
 			font-family: $main-font;
 			font-size: 1rem;
 			font-style: italic;
-			padding: 0.5rem 1rem;
 			text-align: center;
+			transition: all 0.3s;
 			width: 100%;
+
+			&:hover {
+				background-color: $secondary-color;
+			}
 		}
+
+		.output-msg {
+			animation: fadeIn 0.4s linear forwards;
+			display: flex;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background: rgba(#fff, 0.7);
+			top: 0;
+			left: 0;
+
+			p {
+				animation: fadeIn 0.4s 0.2s linear forwards;
+				margin: auto;
+				font-size: 1.25rem;
+			}
+		}
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }

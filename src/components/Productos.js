@@ -56,13 +56,13 @@ const Productos = () => {
 			</h2>
 
 			<div className="products__intro">
-				Materias primas para heladería, confitería y chocolatería además todo el asesoramiento
-				para que tus producciones sean únicas.
+				Materias primas y todo el asesoramiento para que tus producciones sean únicas.
 			</div>
 
 			<div className="products__gallery">
 				<div className="product-img" data-aos="flip-up">
-					<Img className="gimage" fluid={bombones.childImageSharp.fluid} alt={bombones.name} />
+					<Img className="gimage" fluid={helados.childImageSharp.fluid} alt={helados.name} />
+					<h3 className="product-img__title">Heladería</h3>
 				</div>
 				<div className="product-img" data-aos="flip-up">
 					<Img
@@ -70,12 +70,15 @@ const Productos = () => {
 						fluid={galletitas.childImageSharp.fluid}
 						alt={galletitas.name}
 					/>
+					<h3 className="product-img__title">Chocolatería</h3>
 				</div>
 				<div className="product-img" data-aos="flip-up">
 					<Img className="gimage" fluid={rellenos.childImageSharp.fluid} alt={rellenos.name} />
+					<h3 className="product-img__title">Confitería</h3>
 				</div>
 				<div className="product-img" data-aos="flip-up">
-					<Img className="gimage" fluid={helados.childImageSharp.fluid} alt={helados.name} />
+					<Img className="gimage" fluid={bombones.childImageSharp.fluid} alt={bombones.name} />
+					<h3 className="product-img__title">Repostería</h3>
 				</div>
 			</div>
 		</section>

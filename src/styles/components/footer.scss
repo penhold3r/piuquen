@@ -75,6 +75,9 @@
 	}
 
 	&__copy {
+		align-items: center;
+		letter-spacing: 0.05rem;
+		display: flex;
 		font-size: 0.8rem;
 		order: 3;
 	}

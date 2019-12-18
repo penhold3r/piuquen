@@ -55,10 +55,27 @@
 		}
 
 		.product-img {
+			background: $primary-color;
 			position: relative;
 
 			.gimage {
 				border-radius: 6px;
+				opacity: 0.6;
+				z-index: 0;
+			}
+
+			&__title {
+				align-items: center;
+				color: $white;
+				display: flex;
+				height: 100%;
+				justify-content: center;
+				left: 0;
+				position: absolute;
+				top: 0;
+				margin: 0;
+				width: 100%;
+				z-index: 1;
 			}
 		}
 	}

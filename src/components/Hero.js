@@ -60,7 +60,7 @@ const Hero = () => {
 				{images.length &&
 					images.map(({ id, name, childImageSharp }, index) => (
 						<div
-							key={id}
+							key={index}
 							className={currSlide === index ? 'slide fade-left' : 'slide'}
 							style={{ zIndex: currSlide === index ? images.length : order[index] }}
 						>
