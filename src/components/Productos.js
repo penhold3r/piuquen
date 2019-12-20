@@ -60,25 +60,33 @@ const Productos = () => {
 			</div>
 
 			<div className="products__gallery">
-				<div className="product-img" data-aos="flip-up">
+				<div className="product-img">
 					<Img className="gimage" fluid={helados.childImageSharp.fluid} alt={helados.name} />
-					<h3 className="product-img__title">Heladería</h3>
+					<h3 className="product-img__title" data-aos="fade-up">
+						Heladería
+					</h3>
 				</div>
-				<div className="product-img" data-aos="flip-up">
+				<div className="product-img">
 					<Img
 						className="gimage"
 						fluid={galletitas.childImageSharp.fluid}
 						alt={galletitas.name}
 					/>
-					<h3 className="product-img__title">Chocolatería</h3>
+					<h3 className="product-img__title" data-aos="fade-up">
+						Chocolatería
+					</h3>
 				</div>
-				<div className="product-img" data-aos="flip-up">
+				<div className="product-img">
 					<Img className="gimage" fluid={rellenos.childImageSharp.fluid} alt={rellenos.name} />
-					<h3 className="product-img__title">Confitería</h3>
+					<h3 className="product-img__title" data-aos="fade-up">
+						Confitería
+					</h3>
 				</div>
-				<div className="product-img" data-aos="flip-up">
+				<div className="product-img">
 					<Img className="gimage" fluid={bombones.childImageSharp.fluid} alt={bombones.name} />
-					<h3 className="product-img__title">Repostería</h3>
+					<h3 className="product-img__title" data-aos="fade-up">
+						Repostería
+					</h3>
 				</div>
 			</div>
 		</section>

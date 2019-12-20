@@ -25,7 +25,7 @@ const Footer = () => {
 		childImageSharp: { fluid }
 	} = file
 	return (
-		<footer className="site-footer p-2 bg-dark-grey">
+		<footer className="site-footer bg-dark-grey">
 			<Img className="site-footer__image" fluid={fluid} alt={name} />
 			<div className="site-footer__contact-data py-3">
 				<div className="contact-block">
@@ -63,7 +63,9 @@ const Footer = () => {
 					<FontAwesomeIcon className="fa" icon={['fab', 'whatsapp']} />
 				</Link>
 			</div>
-			<div className="site-footer__copy">Eurolam &copy; {new Date().getFullYear()}</div>
+			<div className="site-footer__copy p-2 bg-color-dark-grey">
+				Eurolam &copy; {new Date().getFullYear()}
+			</div>
 		</footer>
 	)
 }

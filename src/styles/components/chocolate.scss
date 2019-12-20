@@ -66,6 +66,8 @@
 		.icon {
 			display: flex;
 			margin: 2rem auto;
+			width: 90%;
+			max-width: 480px;
 
 			&:before,
 			&:after {
@@ -74,7 +76,7 @@
 				display: block;
 				content: '';
 				height: 1px;
-				width: 200px;
+				width: 40%;
 			}
 
 			img {

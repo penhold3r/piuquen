@@ -19,8 +19,8 @@ const History = () => {
 
 			<div className="history__about p-1" data-aos="fade-up">
 				<h3 className="about-title m-none text-color-accent">Conocenos</h3>
-				<div className="about-text p-h-1">
-					<p className="text-color-primary">
+				<div className="about-text">
+					<p className="text-color-primary m-none px-1 pb-1">
 						<em>
 							Gustavo, Marisa y Carina los une la familia y un proyecto soñado por los tres,
 							el de fabricar chocolate. Cada uno con su impronta hacen que sus artículos se

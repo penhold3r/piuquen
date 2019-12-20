@@ -1,6 +1,7 @@
 .site-footer {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
 	position: relative;
 
 	&__image {
@@ -48,12 +49,11 @@
 
 	&__social {
 		display: flex;
-		margin: 0 0 0 auto;
-		order: 4;
+		margin: auto;
 
 		.social-link {
 			border-radius: 50%;
-			border: 1px solid $white;
+			border: 1px solid $accent-color;
 			color: $white;
 			display: flex;
 			height: 40px;
@@ -68,17 +68,19 @@
 			}
 
 			&:hover {
-				border: 1px solid $accent-color;
-				color: $accent-color;
+				background: $accent-color;
+				color: $white;
 			}
 		}
 	}
 
 	&__copy {
 		align-items: center;
-		letter-spacing: 0.05rem;
 		display: flex;
 		font-size: 0.8rem;
-		order: 3;
+		letter-spacing: 0.05rem;
+		margin: 2rem 0 0;
+		justify-content: center;
+		width: 100%;
 	}
 }

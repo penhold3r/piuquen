@@ -5,6 +5,14 @@ import Img from 'gatsby-image'
 const useInterval = (callback, delay) => {
 	const savedCallback = useRef()
 
+	useEffect(
+		() => () => {
+			console.log('unmount')
+			savedCallback.current = null
+		},
+		[]
+	)
+
 	useEffect(() => {
 		savedCallback.current = callback
 	}, [callback])
@@ -69,7 +77,7 @@ const Hero = () => {
 					))}
 			</div>
 			<div className="display hero__text text-color-light">
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+				<p>Crea sin límites, nosotros te aseguramos calidad!</p>
 			</div>
 		</section>
 	)

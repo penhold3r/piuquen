@@ -24,13 +24,13 @@ const Contact = () => {
 
 	return (
 		<section className="contact py-3 px-1" id="contacto">
-			<h2 className="contact__title text-color-primary">
+			<h2 className="contact__title text-color-primary" data-aos="fade-in">
 				Esperamos
 				<br />
 				<em className="display text-color-secondary">tu contacto</em>
 			</h2>
 
-			<form className="contact__form" ref={form} onSubmit={handleSubmit}>
+			<form className="contact__form" ref={form} onSubmit={handleSubmit} data-aos="fade-up">
 				<div className="form-block">
 					<input className="input" type="text" name="name" placeholder="Nombre" required />
 				</div>
