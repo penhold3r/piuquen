@@ -1,6 +1,7 @@
 .specials {
 	margin: 0 auto;
 	max-width: 1000px;
+	overflow-x: hidden;
 	position: relative;
 
 	&__title {
@@ -8,6 +9,18 @@
 		line-height: 0.8;
 		text-transform: uppercase;
 		margin: 0 0 1rem;
+		position: relative;
+		width: fit-content;
+
+		&:after {
+			background: $accent-color;
+			bottom: 0;
+			content: '';
+			height: 1px;
+			left: calc(100% + 2rem);
+			position: absolute;
+			width: 100vw;
+		}
 
 		@include tablet {
 			text-align: center;
@@ -20,31 +33,79 @@
 	}
 
 	&__content {
+		overflow-x: hidden;
+
+		.blocks-wrapper {
+			display: flex;
+			position: relative;
+			transition: all 1s ease-in-out;
+
+			.special-block {
+				display: flex;
+				flex: 0 0 auto;
+				width: 100%;
+
+				@include tablet {
+					flex-wrap: wrap;
+				}
+
+				.content-text {
+					margin: 0 2rem 0 0;
+					width: $w1-3;
+
+					@include tablet {
+						text-align: center;
+						width: 100%;
+					}
+				}
+
+				.content-image {
+					height: 350px;
+					width: $w2-3;
+
+					@include tablet {
+						width: 100%;
+					}
+
+					img {
+						object-fit: contain !important;
+					}
+				}
+			}
+		}
+	}
+
+	&__nav {
+		bottom: 8rem;
 		display: flex;
+		left: 1rem;
+		position: absolute;
+		z-index: 9;
 
 		@include tablet {
-			flex-wrap: wrap;
+			bottom: 2rem;
+			right: 1rem;
+			margin: 0 auto;
+			width: fit-content;
 		}
 
-		.content-text {
-			margin: 0 2rem 0 0;
-			width: $w1-3;
+		.nav-bullet {
+			color: $light-grey;
+			cursor: pointer;
+			font-size: 3rem;
+			margin-right: 0.5rem;
+			transition: all 0.3s;
 
 			@include tablet {
-				text-align: center;
-				width: 100%;
-			}
-		}
-
-		.content-image {
-			width: $w2-3;
-
-			@include tablet {
-				width: 100%;
+				font-size: 6rem;
 			}
 
-			img {
-				object-fit: contain !important;
+			&.active {
+				color: $accent-color;
+			}
+
+			&:hover {
+				opacity: 0.8;
 			}
 		}
 	}

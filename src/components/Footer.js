@@ -59,7 +59,11 @@ const Footer = () => {
 				<Link to="https://twitter.com" className="social-link mx-q-1" title="Twitter">
 					<FontAwesomeIcon className="fa" icon={['fab', 'twitter']} />
 				</Link>
-				<Link to="https://whatsapp.com" className="social-link mx-q-1" title="whatsapp">
+				<Link
+					to="https://wa.me/+542614313748/Hola"
+					className="social-link mx-q-1"
+					title="whatsapp"
+				>
 					<FontAwesomeIcon className="fa" icon={['fab', 'whatsapp']} />
 				</Link>
 			</div>

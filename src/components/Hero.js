@@ -5,14 +5,6 @@ import Img from 'gatsby-image'
 const useInterval = (callback, delay) => {
 	const savedCallback = useRef()
 
-	useEffect(
-		() => () => {
-			console.log('unmount')
-			savedCallback.current = null
-		},
-		[]
-	)
-
 	useEffect(() => {
 		savedCallback.current = callback
 	}, [callback])
@@ -69,7 +61,7 @@ const Hero = () => {
 					images.map(({ id, name, childImageSharp }, index) => (
 						<div
 							key={index}
-							className={currSlide === index ? 'slide fade-left' : 'slide'}
+							className={currSlide === index ? 'slide active' : 'slide'}
 							style={{ zIndex: currSlide === index ? images.length : order[index] }}
 						>
 							<Img fluid={childImageSharp.fluid} alt={name} title={name} />

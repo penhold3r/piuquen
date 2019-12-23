@@ -1,22 +1,17 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { submitFormData } from 'submit-form-data'
 
 const Contact = () => {
-	const form = useRef(null)
-
-	console.log(form.current)
-
 	const handleSubmit = e => {
 		e.preventDefault()
-		console.log(e.target)
 
 		const settings = {
-			dest: 'process_data.php',
+			dest: 'https://piuquenchocolates.com/contact-form/index.php',
 			fields: '.input',
 			successMsg: 'Mensaje enviado!',
 			errorMsg: 'Hubo un error!',
 			sending: 'Enviando...',
-			reciever: 'hello@world-mail.com'
+			reciever: 'info@piuquenchocolates.com'
 		}
 
 		submitFormData(e.target, settings)
@@ -30,7 +25,7 @@ const Contact = () => {
 				<em className="display text-color-secondary">tu contacto</em>
 			</h2>
 
-			<form className="contact__form" ref={form} onSubmit={handleSubmit} data-aos="fade-up">
+			<form className="contact__form" onSubmit={handleSubmit} data-aos="fade-up">
 				<div className="form-block">
 					<input className="input" type="text" name="name" placeholder="Nombre" required />
 				</div>

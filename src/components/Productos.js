@@ -62,7 +62,7 @@ const Productos = () => {
 			<div className="products__gallery">
 				<div className="product-img">
 					<Img className="gimage" fluid={helados.childImageSharp.fluid} alt={helados.name} />
-					<h3 className="product-img__title" data-aos="fade-up">
+					<h3 className="product-img__title" data-aos="fade-in">
 						Heladería
 					</h3>
 				</div>
@@ -72,19 +72,19 @@ const Productos = () => {
 						fluid={galletitas.childImageSharp.fluid}
 						alt={galletitas.name}
 					/>
-					<h3 className="product-img__title" data-aos="fade-up">
+					<h3 className="product-img__title" data-aos="fade-in">
 						Chocolatería
 					</h3>
 				</div>
 				<div className="product-img">
 					<Img className="gimage" fluid={rellenos.childImageSharp.fluid} alt={rellenos.name} />
-					<h3 className="product-img__title" data-aos="fade-up">
+					<h3 className="product-img__title" data-aos="fade-in">
 						Confitería
 					</h3>
 				</div>
 				<div className="product-img">
 					<Img className="gimage" fluid={bombones.childImageSharp.fluid} alt={bombones.name} />
-					<h3 className="product-img__title" data-aos="fade-up">
+					<h3 className="product-img__title" data-aos="fade-in">
 						Repostería
 					</h3>
 				</div>

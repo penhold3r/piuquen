@@ -18,7 +18,7 @@ const History = () => {
 			</div>
 
 			<div className="history__about p-1" data-aos="fade-up">
-				<h3 className="about-title m-none text-color-accent">Conocenos</h3>
+				<h3 className="about-title m-none mb-1 text-color-accent">Conocenos</h3>
 				<div className="about-text">
 					<p className="text-color-primary m-none px-1 pb-1">
 						<em>
