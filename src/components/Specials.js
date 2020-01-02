@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 const Specials = () => {
-	const { packs, bag } = useStaticQuery(graphql`
+	const { packs, bag, cans } = useStaticQuery(graphql`
 		query {
 			packs: file(name: { eq: "packs" }) {
 				name
@@ -15,6 +15,15 @@ const Specials = () => {
 				}
 			}
 			bag: file(name: { eq: "packs-bag" }) {
+				name
+				childImageSharp {
+					fluid(maxWidth: 800) {
+						src
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+			cans: file(name: { eq: "packs-cans" }) {
 				name
 				childImageSharp {
 					fluid(maxWidth: 800) {
@@ -68,27 +77,27 @@ const Specials = () => {
 					<div className="special-block">
 						<div className="content-text">
 							<p>
-								Latas. Chocolates para moldeo y cubre torta piuquén, cacao de exc elente
-								calidad, pastas para saborizar helados y cremas, pulpas de frutas y una gran
-								variedad de confites bañados.
+								Latas de frutos. <br />
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium a sint
+								esse consectetur magnam fugit!
 							</p>
 						</div>
-						<Img className="content-image" fluid={bag.childImageSharp.fluid} alt={bag.name} />
+						<Img
+							className="content-image"
+							fluid={cans.childImageSharp.fluid}
+							alt={cans.name}
+						/>
 					</div>
 
 					<div className="special-block">
 						<div className="content-text">
 							<p>
-								Bolsa. Chocolates para moldeo y cubre torta piuquén, cacao de exc elente
-								calidad, pastas para saborizar helados y cremas, pulpas de frutas y una gran
-								variedad de confites bañados.
+								Bolsa de 1kg. <br />
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ipsa
+								veniam illum ea! Delectus, magni. Voluptates, aspernatur.
 							</p>
 						</div>
-						<Img
-							className="content-image"
-							fluid={packs.childImageSharp.fluid}
-							alt={packs.name}
-						/>
+						<Img className="content-image" fluid={bag.childImageSharp.fluid} alt={bag.name} />
 					</div>
 				</div>
 			</div>
