@@ -62,9 +62,7 @@ const Specials = () => {
 					<div className="special-block active">
 						<div className="content-text">
 							<p>
-								Chocolates para moldeo y cubre torta piuquén, cacao de exc elente calidad,
-								pastas para saborizar helados y cremas, pulpas de frutas y una gran variedad
-								de confites bañados.
+								Chocolates para moldeo y cubre torta piuquén, cacao de excelente calidad.
 							</p>
 						</div>
 						<Img
@@ -77,9 +75,8 @@ const Specials = () => {
 					<div className="special-block">
 						<div className="content-text">
 							<p>
-								Latas de frutos. <br />
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium a sint
-								esse consectetur magnam fugit!
+								Pastas para saborizar helados y cremas, pulpas de frutas y una gran variedad
+								de confites bañados.
 							</p>
 						</div>
 						<Img
@@ -92,9 +89,8 @@ const Specials = () => {
 					<div className="special-block">
 						<div className="content-text">
 							<p>
-								Bolsa de 1kg. <br />
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ipsa
-								veniam illum ea! Delectus, magni. Voluptates, aspernatur.
+								Tambien en bolsa agranel (15kg) de chocolates para moldeo y cubre torta
+								piuquén, cacao de excelente calidad.
 							</p>
 						</div>
 						<Img className="content-image" fluid={bag.childImageSharp.fluid} alt={bag.name} />
