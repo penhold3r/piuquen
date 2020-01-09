@@ -68,8 +68,12 @@ const Hero = () => {
 						</div>
 					))}
 			</div>
-			<div className="display hero__text text-color-light">
-				<p>Crea sin límites, nosotros te aseguramos calidad!</p>
+			<div className="hero__text text-color-light">
+				<p>
+					<span className="serif">Creá sin límites</span>
+					<br />
+					<span className="display">Nosotros te aseguramos calidad!</span>
+				</p>
 			</div>
 		</section>
 	)

@@ -44,7 +44,13 @@
 
 		p {
 			font-size: 3rem;
+			line-height: 1;
 			margin: 0;
+			text-align: center;
+
+			.serif {
+				font-size: 2.5rem;
+			}
 
 			@include tablet {
 				font-size: 2rem;
@@ -57,10 +63,10 @@
 @keyframes slide {
 	from {
 		transform: scale(1.2);
-		filter: brightness(350%);
+		//filter: brightness(350%);
 	}
 	to {
 		transform: scale(1);
-		filter: brightness(100%);
+		//filter: brightness(100%);
 	}
 }

@@ -22,10 +22,13 @@ const History = () => {
 				<div className="about-text">
 					<p className="text-color-primary m-none px-1 pb-1">
 						<em>
-							Gustavo, Marisa y Carina los une la familia y un proyecto soñado por los tres,
-							el de fabricar chocolate. Cada uno con su impronta hacen que sus artículos se
-							distingan y ocupen un lugar muy valorado por quienes lo sumaron a sus
-							productos.
+							<strong>
+								Gustavo, Marisa y Carina los une la familia y un proyecto soñado por los
+								tres, fabricar chocolate.
+							</strong>
+							<br />
+							Cada uno con su impronta hacen que sus artículos se distingan y ocupen un lugar
+							muy valorado por quienes lo sumaron a sus productos.
 						</em>
 					</p>
 				</div>

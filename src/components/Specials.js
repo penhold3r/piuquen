@@ -75,6 +75,16 @@ const Specials = () => {
 					<div className="special-block">
 						<div className="content-text">
 							<p>
+								Tambien en bolsa agranel (15kg) de chocolates para moldeo y cubre torta
+								piuquén, cacao de excelente calidad.
+							</p>
+						</div>
+						<Img className="content-image" fluid={bag.childImageSharp.fluid} alt={bag.name} />
+					</div>
+
+					<div className="special-block">
+						<div className="content-text">
+							<p>
 								Pastas para saborizar helados y cremas, pulpas de frutas y una gran variedad
 								de confites bañados.
 							</p>
@@ -84,16 +94,6 @@ const Specials = () => {
 							fluid={cans.childImageSharp.fluid}
 							alt={cans.name}
 						/>
-					</div>
-
-					<div className="special-block">
-						<div className="content-text">
-							<p>
-								Tambien en bolsa agranel (15kg) de chocolates para moldeo y cubre torta
-								piuquén, cacao de excelente calidad.
-							</p>
-						</div>
-						<Img className="content-image" fluid={bag.childImageSharp.fluid} alt={bag.name} />
 					</div>
 				</div>
 			</div>
