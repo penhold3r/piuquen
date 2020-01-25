@@ -2,7 +2,7 @@
 	"name": "piuquen-chocolates",
 	"private": true,
 	"description": "Piuquen Chocolates",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"author": "Penholder Designerd <penhold3r@gmail.com>",
 	"license": "MIT",
 	"scripts": {
