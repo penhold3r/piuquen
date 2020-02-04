@@ -3,7 +3,7 @@ const globImporter = require('node-sass-glob-importer')
 module.exports = {
 	siteMetadata: {
 		title: `Piuquen Chocolates`,
-		description: `Piuquen Chocolates`,
+		description: `Materias primas y asesoramiento en preoductos de chocolatería`,
 		author: `@piuquen`
 	},
 	plugins: [

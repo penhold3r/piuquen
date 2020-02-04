@@ -61,7 +61,8 @@ const HTMLHead = ({ title, description, author }) => {
 				},
 				{
 					name: 'keywords',
-					content: 'chocolate, chocolates, confituras'
+					content:
+						'chocolate, chocolates, chocoltería, pastelería, repostería, confituras, helados, mendoza'
 				}
 			]}
 			link={[

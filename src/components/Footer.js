@@ -68,7 +68,7 @@ const Footer = () => {
 				</Link>
 			</div>
 			<div className="site-footer__copy p-2 bg-color-dark-grey">
-				Eurolam &copy; {new Date().getFullYear()}
+				Piuquén Chocolates &copy; {new Date().getFullYear()}
 			</div>
 		</footer>
 	)

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 const Specials = () => {
-	const { packs, bag, cans } = useStaticQuery(graphql`
+	const { packs, bag, bucket, craft, whiteBox } = useStaticQuery(graphql`
 		query {
 			packs: file(name: { eq: "packs" }) {
 				name
@@ -23,7 +23,25 @@ const Specials = () => {
 					}
 				}
 			}
-			cans: file(name: { eq: "packs-cans" }) {
+			bucket: file(name: { eq: "packs-bucket" }) {
+				name
+				childImageSharp {
+					fluid(maxWidth: 800) {
+						src
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+			craft: file(name: { eq: "packs-craft" }) {
+				name
+				childImageSharp {
+					fluid(maxWidth: 800) {
+						src
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+			whiteBox: file(name: { eq: "packs-white-box" }) {
 				name
 				childImageSharp {
 					fluid(maxWidth: 800) {
@@ -91,8 +109,36 @@ const Specials = () => {
 						</div>
 						<Img
 							className="content-image"
-							fluid={cans.childImageSharp.fluid}
-							alt={cans.name}
+							fluid={bucket.childImageSharp.fluid}
+							alt={bucket.name}
+						/>
+					</div>
+
+					<div className="special-block">
+						<div className="content-text">
+							<p>
+								Pastas para saborizar helados y cremas, pulpas de frutas y una gran variedad
+								de confites bañados.
+							</p>
+						</div>
+						<Img
+							className="content-image"
+							fluid={craft.childImageSharp.fluid}
+							alt={craft.name}
+						/>
+					</div>
+
+					<div className="special-block">
+						<div className="content-text">
+							<p>
+								Pastas para saborizar helados y cremas, pulpas de frutas y una gran variedad
+								de confites bañados.
+							</p>
+						</div>
+						<Img
+							className="content-image"
+							fluid={whiteBox.childImageSharp.fluid}
+							alt={whiteBox.name}
 						/>
 					</div>
 				</div>

@@ -16,6 +16,7 @@ import History from '../components/History'
 import Chocolate from '../components/Chocolate'
 import Productos from '../components/Productos'
 import Specials from '../components/Specials'
+import Carrousel from '../components/Carrousel'
 import Contact from '../components/Contact'
 
 import 'sanitize.css'
@@ -62,6 +63,7 @@ const IndexPage = () => {
 				<Chocolate />
 				<Productos />
 				<Specials />
+            <Carrousel/>
 				<Contact />
 			</main>
 			<Footer />
