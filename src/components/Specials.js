@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
@@ -54,7 +54,9 @@ const Specials = () => {
 	`)
 
 	const [left, setLeft] = useState(0)
+	const [blocks, setBlocks] = useState(null)
 	const nav = useRef(null)
+	const blocksRef = useRef(null)
 
 	const handleScroll = e => {
 		const index = [...e.target.parentNode.childNodes].indexOf(e.target)
@@ -66,7 +68,11 @@ const Specials = () => {
 		setLeft(-index * 100)
 	}
 
-	console.log(packs, bag)
+	useEffect(() => {
+		setBlocks([...blocksRef.current.childNodes])
+	}, [])
+
+	console.log(blocks)
 
 	return (
 		<section className="specials py-4 px-1">
@@ -76,7 +82,7 @@ const Specials = () => {
 				<em className="display text-color-secondary">especiales</em>
 			</h2>
 			<div className="specials__content">
-				<div className="blocks-wrapper" style={{ left: `${left}%` }}>
+				<div className="blocks-wrapper" style={{ left: `${left}%` }} ref={blocksRef}>
 					<div className="special-block active">
 						<div className="content-text">
 							<p>
@@ -117,8 +123,8 @@ const Specials = () => {
 					<div className="special-block">
 						<div className="content-text">
 							<p>
-								Pastas para saborizar helados y cremas, pulpas de frutas y una gran variedad
-								de confites bañados.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perspiciatis
+								veritatis nostrum! Culpa, ab similique.
 							</p>
 						</div>
 						<Img
@@ -131,8 +137,8 @@ const Specials = () => {
 					<div className="special-block">
 						<div className="content-text">
 							<p>
-								Pastas para saborizar helados y cremas, pulpas de frutas y una gran variedad
-								de confites bañados.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta assumenda
+								ipsa.
 							</p>
 						</div>
 						<Img
@@ -144,15 +150,16 @@ const Specials = () => {
 				</div>
 			</div>
 			<div className="specials__nav" ref={nav}>
-				<div className="nav-bullet active" onClick={handleScroll}>
-					&bull;
-				</div>
-				<div className="nav-bullet" onClick={handleScroll}>
-					&bull;
-				</div>
-				<div className="nav-bullet" onClick={handleScroll}>
-					&bull;
-				</div>
+				{blocks &&
+					blocks.map((block, i) => (
+						<div
+							key={i}
+							className={i === 0 ? 'nav-bullet active' : 'nav-bullet'}
+							onClick={handleScroll}
+						>
+							&bull;
+						</div>
+					))}
 			</div>
 		</section>
 	)
