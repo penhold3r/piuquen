@@ -63,7 +63,7 @@ const IndexPage = () => {
 				<Chocolate />
 				<Productos />
 				<Specials />
-            <Carrousel/>
+				<Carrousel />
 				<Contact />
 			</main>
 			<Footer />
