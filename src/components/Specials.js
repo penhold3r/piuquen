@@ -53,10 +53,34 @@ const Specials = () => {
 		}
 	`)
 
+	const blocks = [
+		{
+			image: packs,
+			text: 'Chocolates para moldeo y cubre torta piuquén, cacao de excelente calidad.'
+		},
+		{
+			image: bag,
+			text:
+				'Tambien en bolsa agranel (15kg) de chocolates para moldeo y cubre torta Piuquén, cacao de excelente calidad.'
+		},
+		{
+			image: bucket,
+			text:
+				'Pastas para saborizar helados y cremas, pulpas de frutas y una gran variedad de confites bañados.'
+		},
+		{
+			image: craft,
+			text:
+				'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit tempora architecto aperiam voluptas accusantium.'
+		},
+		{
+			image: whiteBox,
+			text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, voluptatem.'
+		}
+	]
+
 	const [left, setLeft] = useState(0)
-	const [blocks, setBlocks] = useState(null)
 	const nav = useRef(null)
-	const blocksRef = useRef(null)
 
 	const handleScroll = e => {
 		const index = [...e.target.parentNode.childNodes].indexOf(e.target)
@@ -68,12 +92,6 @@ const Specials = () => {
 		setLeft(-index * 100)
 	}
 
-	useEffect(() => {
-		setBlocks([...blocksRef.current.childNodes])
-	}, [])
-
-	console.log(blocks)
-
 	return (
 		<section className="specials py-4 px-1">
 			<h2 className="specials__title text-color-primary">
@@ -82,71 +100,23 @@ const Specials = () => {
 				<em className="display text-color-secondary">especiales</em>
 			</h2>
 			<div className="specials__content">
-				<div className="blocks-wrapper" style={{ left: `${left}%` }} ref={blocksRef}>
-					<div className="special-block active">
-						<div className="content-text">
-							<p>
-								Chocolates para moldeo y cubre torta piuquén, cacao de excelente calidad.
-							</p>
-						</div>
-						<Img
-							className="content-image"
-							fluid={packs.childImageSharp.fluid}
-							alt={packs.name}
-						/>
-					</div>
-
-					<div className="special-block">
-						<div className="content-text">
-							<p>
-								Tambien en bolsa agranel (15kg) de chocolates para moldeo y cubre torta
-								piuquén, cacao de excelente calidad.
-							</p>
-						</div>
-						<Img className="content-image" fluid={bag.childImageSharp.fluid} alt={bag.name} />
-					</div>
-
-					<div className="special-block">
-						<div className="content-text">
-							<p>
-								Pastas para saborizar helados y cremas, pulpas de frutas y una gran variedad
-								de confites bañados.
-							</p>
-						</div>
-						<Img
-							className="content-image"
-							fluid={bucket.childImageSharp.fluid}
-							alt={bucket.name}
-						/>
-					</div>
-
-					<div className="special-block">
-						<div className="content-text">
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perspiciatis
-								veritatis nostrum! Culpa, ab similique.
-							</p>
-						</div>
-						<Img
-							className="content-image"
-							fluid={craft.childImageSharp.fluid}
-							alt={craft.name}
-						/>
-					</div>
-
-					<div className="special-block">
-						<div className="content-text">
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta assumenda
-								ipsa.
-							</p>
-						</div>
-						<Img
-							className="content-image"
-							fluid={whiteBox.childImageSharp.fluid}
-							alt={whiteBox.name}
-						/>
-					</div>
+				<div className="blocks-wrapper" style={{ left: `${left}%` }}>
+					{blocks &&
+						blocks.map((block, key) => (
+							<div
+								className={key === 0 ? 'special-block active' : 'special-block'}
+								key={key}
+							>
+								<div className="content-text">
+									<p>{block.text}</p>
+								</div>
+								<Img
+									className="content-image"
+									fluid={block.image.childImageSharp.fluid}
+									alt={block.image.name}
+								/>
+							</div>
+						))}
 				</div>
 			</div>
 			<div className="specials__nav" ref={nav}>
@@ -155,6 +125,7 @@ const Specials = () => {
 						<div
 							key={i}
 							className={i === 0 ? 'nav-bullet active' : 'nav-bullet'}
+							title={block.image.name}
 							onClick={handleScroll}
 						>
 							&bull;

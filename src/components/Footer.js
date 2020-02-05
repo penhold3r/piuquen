@@ -28,7 +28,7 @@ const Footer = () => {
 		<footer className="site-footer bg-dark-grey">
 			<Img className="site-footer__image" fluid={fluid} alt={name} />
 			<div className="site-footer__contact-data py-3">
-				<div className="contact-block">
+				<div className="contact-block address">
 					<FontAwesomeIcon className="fa" icon={['fas', 'home']} />
 					<p>
 						<Link to="https://goo.gl/maps/KTDKfuavPxJZHDRM6">
@@ -36,13 +36,13 @@ const Footer = () => {
 						</Link>
 					</p>
 				</div>
-				<div className="contact-block">
+				<div className="contact-block phone">
 					<FontAwesomeIcon className="fa" icon={['fas', 'phone-alt']} />
 					<p>
 						<Link to="tel:+542614313748">261 431 3748</Link>
 					</p>
 				</div>
-				<div className="contact-block">
+				<div className="contact-block mail">
 					<FontAwesomeIcon className="fa" icon={['fas', 'envelope']} />
 					<p>
 						<Link to="mailto:info@piuquenchocolates.com">info@piuquenchocolates.com</Link>
