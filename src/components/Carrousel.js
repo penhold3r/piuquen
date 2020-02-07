@@ -32,10 +32,9 @@ const Carrousel = () => {
 				autoSlide={true}
 				pauseOnMouseOver={false}
 				responsive={[
-					{ breakPoint: 600, cardsToShow: 3 },
-					{ breakPoint: 900, cardsToShow: 4 },
-					{ breakPoint: 1200, cardsToShow: 6 },
-					{ breakPoint: 1800, cardsToShow: 8 }
+					{ breakPoint: 1280, cardsToShow: 6 },
+					{ breakPoint: 760, cardsToShow: 4 },
+					{ breakPoint: 400, cardsToShow: 3 }
 				]}
 				showArrows={false}
 				showDots={false}
