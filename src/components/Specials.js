@@ -3,7 +3,17 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 const Specials = () => {
-	const { packs, bag, bucket, craft, whiteBox } = useStaticQuery(graphql`
+	const {
+		packs,
+		bag,
+		bucket,
+		craft,
+		whiteBox,
+		brigelPasta,
+		brigelBatido,
+		brigelMousse,
+		brigelEstabilizante
+	} = useStaticQuery(graphql`
 		query {
 			packs: file(name: { eq: "packs" }) {
 				name
@@ -50,6 +60,42 @@ const Specials = () => {
 					}
 				}
 			}
+			brigelPasta: file(name: { eq: "packs-brigel-mezcla-pasta" }) {
+				name
+				childImageSharp {
+					fluid(maxWidth: 800) {
+						src
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+			brigelBatido: file(name: { eq: "packs-brigel-agente-batido" }) {
+				name
+				childImageSharp {
+					fluid(maxWidth: 800) {
+						src
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+			brigelEstabilizante: file(name: { eq: "packs-brigel-estabilizante" }) {
+				name
+				childImageSharp {
+					fluid(maxWidth: 800) {
+						src
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+			brigelMousse: file(name: { eq: "packs-brigel-mousse" }) {
+				name
+				childImageSharp {
+					fluid(maxWidth: 800) {
+						src
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
 		}
 	`)
 
@@ -60,29 +106,42 @@ const Specials = () => {
 		},
 		{
 			image: bag,
-			text:
-				'Tambien en bolsa agranel (15kg) de chocolates para moldeo y cubre torta Piuquén, cacao de excelente calidad.'
+			text: 'Baños a granel en stick usos múltiples.'
 		},
 		{
 			image: bucket,
-			text:
-				'Pastas para saborizar helados y cremas, pulpas de frutas y una gran variedad de confites bañados.'
+			text: 'Baños para helados y para granizar.'
 		},
 		{
 			image: craft,
-			text:
-				'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit tempora architecto aperiam voluptas accusantium.'
+			text: 'Baños en bloque usos múltiples.'
 		},
 		{
 			image: whiteBox,
-			text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, voluptatem.'
+			text: 'Stick para huevos de pascua, bombones y repostería.'
+		},
+		{
+			image: brigelPasta,
+			text: 'Pasta para preparar helados. En envases de 1k, 3k, 5k.'
+		},
+		{
+			image: brigelBatido,
+			text: 'Polvo para preparar helados de crema. En envases de 3k y 7.5k.'
+		},
+		{
+			image: brigelEstabilizante,
+			text: 'Polvo estabilizante para preparar helados. En envases de 3k y 7.5k.'
+		},
+		{
+			image: brigelMousse,
+			text: 'Polvo estabilizante para preparar mousse.'
 		}
 	]
 
 	const [left, setLeft] = useState(0)
 	const nav = useRef(null)
 
-	const handleScroll = e => {
+	const handleNav = e => {
 		const index = [...e.target.parentNode.childNodes].indexOf(e.target)
 		const btns = [...nav.current.childNodes]
 
@@ -126,7 +185,7 @@ const Specials = () => {
 							key={i}
 							className={i === 0 ? 'nav-bullet active' : 'nav-bullet'}
 							title={block.image.name}
-							onClick={handleScroll}
+							onClick={handleNav}
 						>
 							&bull;
 						</div>
